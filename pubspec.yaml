@@ -1,0 +1,3 @@
+name: uml_parser
+dev_dependencies:
+  guinness: any
