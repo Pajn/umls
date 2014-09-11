@@ -1,7 +1,7 @@
 part of uml;
 
 class Class {
-    static final PATTERN = new RegExp(r'\[(\S+?(?=\||\]))((?:\|.*?(?=\||\]))+)?\]', caseSensitive: false);
+    static final PATTERN = new RegExp(r'\[([^\s\]]+?(?=\||\]))((?:\|[^\|\]]*)+)?\]', caseSensitive: false);
 
     String name;
     List<Variable> attributes = [];

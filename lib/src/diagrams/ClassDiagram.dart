@@ -1,12 +1,11 @@
 part of uml;
 
 class ClassDiagram {
-    static final CLASS_PATTERN = new RegExp(r'\[(\S+?(?=\||\]))(?:.*?(?=\]))\]', caseSensitive: false);
-
+    List<Association> associations = [];
     List<Class> classes = [];
 
     parse(String input) {
-        CLASS_PATTERN.allMatches(input).forEach((match) {
+        Class.PATTERN.allMatches(input).forEach((match) {
             var name = match.group(1);
 
             try {
@@ -15,11 +14,16 @@ class ClassDiagram {
                 classes.add(new Class()..parse(match.group(0)));
             }
         });
+
+        Association.PATTERN.allMatches(input).forEach((match) {
+            associations.add(new Association()..parse(match.group(0)));
+        });
     }
 
     toJson() {
         return {
             'ClassDiagram': {
+                'associations': associations.map((a) => a.toJson()).toList(),
                 'classes': classes.map((a) => a.toJson()).toList(),
             }
         };
