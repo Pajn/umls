@@ -37,4 +37,22 @@ class Class {
             }
         };
     }
+
+    String toString() {
+        var output = new StringBuffer('[');
+        output.write(name);
+
+        if (attributes.length > 0 || methods.length > 0) {
+            output.write('|');
+            output.writeAll(attributes, ';');
+        }
+
+        if (methods.length > 0) {
+            output.write('|');
+            output.writeAll(methods, ';');
+        }
+
+        output.write(']');
+        return output.toString();
+    }
 }

@@ -20,4 +20,14 @@ class Variable {
             }
         };
     }
+
+    String toString() {
+        var output = new StringBuffer(name);
+
+        if (type != null) {
+            output.writeAll([':', type]);
+        }
+
+        return output.toString();
+    }
 }

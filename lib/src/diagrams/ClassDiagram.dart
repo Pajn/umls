@@ -28,4 +28,14 @@ class ClassDiagram {
             }
         };
     }
+
+    String toString() {
+        var output = new StringBuffer();
+
+        output.writeAll(classes, '\n');
+        output.writeln();
+        output.writeAll(associations, '\n');
+
+        return output.toString();
+    }
 }

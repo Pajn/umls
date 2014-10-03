@@ -28,4 +28,18 @@ class Method {
             }
         };
     }
+
+    String toString() {
+        var output = new StringBuffer(name);
+
+        output.write('(');
+        output.writeAll(arguments, ', ');
+        output.write(')');
+
+        if (returnType != null) {
+            output.writeAll([':', returnType]);
+        }
+
+        return output.toString();
+    }
 }

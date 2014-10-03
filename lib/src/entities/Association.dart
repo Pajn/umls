@@ -37,4 +37,28 @@ class Association {
             }
         };
     }
+
+    String toString() {
+        var output = new StringBuffer();
+        output.writeAll(['[', from, ']']);
+
+        if (fromMultiplicity != null) {
+            output.write(fromMultiplicity);
+        }
+
+        output.write('-');
+
+        if (name != null) {
+            output.write(name);
+            output.write('-');
+        }
+
+        if (toMultiplicity != null) {
+            output.write(toMultiplicity);
+        }
+
+        output.writeAll(['[', to, ']']);
+
+        return output.toString();
+    }
 }
