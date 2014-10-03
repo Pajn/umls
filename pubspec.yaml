@@ -1,3 +1,4 @@
-name: uml_parser
+name: umls
+version: 0.1.0
 dev_dependencies:
   guinness: any

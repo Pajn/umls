@@ -1,4 +1,4 @@
-library uml;
+library umls;
 
 part 'src/diagrams/ClassDiagram.dart';
 

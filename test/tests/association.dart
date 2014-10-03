@@ -1,7 +1,7 @@
 library association_tests;
 
 import 'package:guinness/guinness.dart';
-import 'package:uml_parser/uml_parser.dart';
+import 'package:umls/umls.dart';
 
 main() {
     describe('ClassDiagram', () {

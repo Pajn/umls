@@ -1,4 +1,4 @@
-part of uml;
+part of umls;
 
 class Association {
     static final MULTIPLICITY_PART_REGEX = r'(?:(?:\d+)|\*)(?:\.\.(?:(?:\d+)|\*))?';

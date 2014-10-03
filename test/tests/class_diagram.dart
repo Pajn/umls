@@ -1,14 +1,15 @@
 library class_diagram_tests;
 
 import 'package:guinness/guinness.dart';
-import 'package:uml_parser/uml_parser.dart';
+import 'package:umls/umls.dart';
 
 main() {
     describe('ClassDiagram', () {
         it('it should parse diagrams', () {
             var classDiagram = new ClassDiagram()..parse(
-                '[Post][Member|/name:string;cat : bool|login( username : string, password ):bool;'
-                'logout()] [Member]1-Comments-*[Comment][Post]1-*[Comment]'
+                '[Post]'
+                '[Member|/name:string;cat : bool|login( username : string, password ):bool;logout()]'
+                '[Member]1-Comments-*[Comment][Post]1-*[Comment]'
             );
 
             expect(classDiagram.classes.length).toEqual(3);

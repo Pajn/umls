@@ -1,4 +1,4 @@
-part of uml;
+part of umls;
 
 class Method {
     static final PATTERN = new RegExp(r'(\S+?(?=\())\(((?:.*?(?=,|\)),?)+)\)(?:\s?:\s?([a-z]+))?', caseSensitive: false);

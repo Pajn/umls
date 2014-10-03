@@ -1,4 +1,4 @@
-part of uml;
+part of umls;
 
 class ClassDiagram {
     List<Association> associations = [];
